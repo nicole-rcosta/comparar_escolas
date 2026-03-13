@@ -96,6 +96,21 @@ function instanciarEscolaB(){
 
 /* ===== RELATÓRIO DE COMPARAÇÃO ===== */
 
+const compararEscolas = (e1, e2) => {
+  console.log(`> Comparando oferta de cursos: ${e1.cidadeA} vs ${e2.cidadeB}...`)
+
+  if (e1.qtdeCursosA > e2.qtdeCursosB){
+    textoResultado.textContent = (`Resultado: O SENAI ${e1.cidadeA} possui mais cursos.`);
+  } else if (e2.qtdeCursosB > e1.qtdeCursosA) {
+    textoResultado.textContent = (`Resultado: O SENAI ${e2.cidadeB} possui mais cursos.`);
+  } else {
+    textoResultado.textContent = (`Resultado: Ambas as unidades possuem a mesma quantidade de cursos.`);
+  }
+  console.log(`Status: ${e1.cidadeA} (${e1.qtdeCursosA}) | ${e2.qtdeCursosB} (${e2.qtdeCursosB})\n`);
+}
+
+compararEscolas(escolaA, escolaB);
+
 
 /* ===== NOVA CONSULTA ===== */
 
